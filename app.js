@@ -14,18 +14,19 @@ const hoursLeft = () => Math.floor((deadline-Date.now())/(1000*60*60));
 const minutesLeft = () => Math.floor((deadline-Date.now())/(1000*60))%60;
 const secondsLeft = () => Math.floor((deadline-Date.now())%(1000))%60;
 
-// bot.onText('\/time_left', (msg)=> {
-//     bot.sendMessage('piupiu');
-// })
-
 bot.onText(/\/time_left/, function timeLeft(msg) {
     bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft()} часов, ${minutesLeft()} минут и ${secondsLeft()} секунд `);
   });
 
+  
+bot.on('message', (msg) => {
+    if (~msg.text.indexOf('time_left')) {
+        
+    } else  {
+        const chatId = msg.chat.id;
 
-// bot.on('message', (msg) => {
-//   const chatId = msg.chat.id;
-
-//   // send a message to the chat acknowledging receipt of their message
-//   bot.sendMessage(chatId, 'Received your message');
-// });
+        // send a message to the chat acknowledging receipt of their message
+        bot.sendMessage(chatId, 'Пока что не работаем, но скоро будем)');
+    }
+  
+});
