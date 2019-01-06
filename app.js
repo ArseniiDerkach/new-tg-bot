@@ -20,7 +20,7 @@ const deadline = new Date(1547132820000);
 
 const hoursLeft = (date) => Math.floor((deadline-date)/(1000*60*60));
 const minutesLeft = (date) => Math.floor((deadline-date)/(1000*60))%60;
-const secondsLeft = (date) => Math.floor((deadline-date)%(1000))%60;
+const secondsLeft = (date) => Math.floor((deadline-date)/(1000))%60;
 
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
