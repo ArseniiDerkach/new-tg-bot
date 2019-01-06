@@ -18,12 +18,13 @@ const bot = new TelegramBot(token, {polling: true});
 
 const deadline = new Date(1547132820000);
 
-const hoursLeft = () => Math.floor((deadline-Date.now())/(1000*60*60));
-const minutesLeft = () => Math.floor((deadline-Date.now())/(1000*60))%60;
-const secondsLeft = () => Math.floor((deadline-Date.now())%(1000))%60;
+const hoursLeft = (date) => Math.floor((deadline-date)/(1000*60*60));
+const minutesLeft = (date) => Math.floor((deadline-date)/(1000*60))%60;
+const secondsLeft = (date) => Math.floor((deadline-date)%(1000))%60;
 
 bot.onText(/\/time_left/, function timeLeft(msg) {
-    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft()} часов, ${minutesLeft()} минут и ${secondsLeft()} секунд `);
+    let currentDate = new Date();
+    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд `);
   });
 
   
