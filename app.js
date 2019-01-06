@@ -1,7 +1,11 @@
 const TelegramBot = require('node-telegram-bot-api');
-const http = require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
+const http = require('http')
+http.createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
     res.end('')
 });
+setInterval(function(){
+    http.get('https://tgbot-for-my-love.herokuapp.com/')
+},300000)
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '328596384:AAGPSAUF3dp1X5uN3XJ3rwXJuibH8z_AUxw';
