@@ -17,10 +17,11 @@ const bot = new TelegramBot(token, {polling: true});
 // const timezone = 2;
 
 const deadline = new Date(1547132820000);
+const trainDeadline = new Date(1547153580000);
 
-const hoursLeft = (date) => Math.floor((deadline-date)/(1000*60*60));
-const minutesLeft = (date) => Math.floor((deadline-date)/(1000*60))%60;
-const secondsLeft = (date) => Math.floor((deadline-date)/(1000))%60;
+const hoursLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60*60)) : Math.floor((trainDeadline-date)/(1000*60*60));
+const minutesLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60))%60 : Math.floor((trainDeadline-date)/(1000*60))%60;
+const secondsLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000))%60 : Math.floor((trainDeadline-date)/(1000))%60;
 
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
