@@ -16,7 +16,7 @@ const bot = new TelegramBot(token, {polling: true});
 
 // const timezone = 2;
 
-const deadline = new Date(1547132820000);
+const deadline = new Date(1552850088000);
 const trainDeadline = new Date(1552850088000);
 
 const hoursLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60*60)) : Math.floor((trainDeadline-date)/(1000*60*60));
