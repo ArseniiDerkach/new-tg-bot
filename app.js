@@ -25,7 +25,7 @@ const secondsLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)
 
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
-    bot.sendMessage(70698447, msg.chat.id);
+    bot.sendMessage(70698447, `msg.chat.id: ${msg.chat.id} tells ${msg.text}`);
     bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд `);
   });
 
