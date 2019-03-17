@@ -14,6 +14,8 @@ const token = '328596384:AAGPSAUF3dp1X5uN3XJ3rwXJuibH8z_AUxw';
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
+bot.sendMessage(70698447, `bot is up!}`);
+
 // const timezone = 2;
 
 const deadline = new Date(1553317800000);
