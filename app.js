@@ -18,8 +18,8 @@ bot.sendMessage(70698447, `bot is up!`);
 
 // const timezone = 2;
 
-const deadline = new Date(1558164207000);
-const trainDeadline = new Date(1558164207000);
+const deadline = new Date(1558777581000);
+const trainDeadline = new Date(1558777581000);
 
 const hoursLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60*60)) : Math.floor((deadline-date)/(1000*60*60));
 const minutesLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60))%60 : Math.floor((deadline-date)/(1000*60))%60;
