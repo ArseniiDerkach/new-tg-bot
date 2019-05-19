@@ -28,8 +28,14 @@ const secondsLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
 
-    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до твоего примерного приземления)`);
+    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до твоего примерного приземления). На правах рекламы - не забудьте попробовать нашу новую команду /good_morning :Р`);
   });
+
+bot.onText( /\/good_morning/,(msg) => {
+
+    bot.sendMessage(msg.chat.id, 'доброе утро, любимая моя:* надеюсь ты смогла выспаться и отлично себя чувствуешь) пусть сегодня денек пройдет намного лучше чем вчера во всем:* люблю тебя безумно сильно и очень жду домой<3')
+
+})
 
   
 bot.on('message', (msg) => {
