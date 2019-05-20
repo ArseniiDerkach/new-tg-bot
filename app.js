@@ -35,11 +35,12 @@ bot.onText( /\/good_morning/,(msg) => {
 
     bot.sendMessage(msg.chat.id, 'доброе утро, любимая моя:* надеюсь ты смогла выспаться и отлично себя чувствуешь) пусть сегодня денек пройдет намного лучше чем вчера во всем:* люблю тебя безумно сильно и очень жду домой<3')
 
-})
+});
 
   
 bot.on('message', (msg) => {
     bot.sendMessage(70698447, `msg.chat.id: ${msg.chat.id} tells ${msg.text}`);
+    console.log(msg);
     // if (~msg.text.indexOf('time_left')) {
     //
     // } else  {
