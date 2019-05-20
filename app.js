@@ -28,12 +28,12 @@ const secondsLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
 
-    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до твоего примерного приземления). На правах рекламы - не забудьте попробовать нашу новую команду /good_morning :Р`);
+    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до твоего примерного приземления)`);
   });
 
 bot.onText( /\/good_morning/,(msg) => {
 
-    bot.sendMessage(msg.chat.id, 'доброе утро, любимая моя:* надеюсь ты смогла выспаться и отлично себя чувствуешь) пусть сегодня денек пройдет намного лучше чем вчера во всем:* люблю тебя безумно сильно и очень жду домой<3')
+    bot.sendMessage(msg.chat.id, 'Доброе утро, моя малышка! Пусть твои ножки станут лучше, а горло не болит и все сегодня будет получаться лучше чем вчера:*ну и чтобы не было особой крепатуры)люблю тебя<3')
 
 });
 
@@ -41,13 +41,13 @@ bot.onText( /\/good_morning/,(msg) => {
 bot.on('message', (msg) => {
     bot.sendMessage(70698447, `msg.chat.id: ${msg.chat.id} tells ${msg.text}`);
     console.log(msg);
-    // if (~msg.text.indexOf('time_left')) {
-    //
-    // } else  {
-    //     const chatId = msg.chat.id;
-    //
-    //     // send a message to the chat acknowledging receipt of their message
-    //     bot.sendMessage(chatId, 'Пока что не работаем, но скоро будем)');
-    // }
+    if (~msg.text.indexOf('time_left') || ~msg.text.indexOf('good_morning')) {
+
+    } else  {
+        const chatId = msg.chat.id;
+
+        // send a message to the chat acknowledging receipt of their message
+        bot.sendMessage(chatId, 'понял что я использую старую версию для бота, поэтому утром буду переписывать его, поэтому подожди пожалуйста сегодняшнего вечера, а я что-то новенькое добавлю:*');
+    }
   
 });
