@@ -47,13 +47,13 @@ bot.onText( /\/love_you/,(msg) => {
 bot.on('message', (msg) => {
     bot.sendMessage(70698447, `msg.chat.id: ${msg.chat.id} tells ${msg.text}`);
     console.log(msg);
-    if (~msg.text.indexOf('time_left') || ~msg.text.indexOf('good_morning')) {
+    if (~msg.text.indexOf('time_left') || ~msg.text.indexOf('good_morning') || ~msg.text.indexOf('love_you')) {
 
     } else  {
         const chatId = msg.chat.id;
 
         // send a message to the chat acknowledging receipt of their message
-        bot.sendMessage(chatId, 'понял что я использую старую версию для бота, поэтому утром буду переписывать его, поэтому подожди пожалуйста сегодняшнего вечера, а я что-то новенькое добавлю:*');
+        bot.sendMessage(chatId, 'я еще пишу нового бота, поэтому если хочешь еще что-то использовать то напиши /love_you ))');
     }
   
 });
