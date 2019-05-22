@@ -33,13 +33,13 @@ bot.onText(/\/time_left/, function timeLeft(msg) {
 
 bot.onText( /\/good_morning/,(msg) => {
 
-    bot.sendMessage(msg.chat.id, 'Радость моя, доброго тебе утречка) Хорошего и успешного тебе дня:* пусть ножки заживут за ночь, а горло пройдет:*')
+    bot.sendMessage(msg.chat.id, 'Малыш, доброе утро)поздравляю тебя со вторым днем полегче;)хорошего тебе денька, успешно все сделать и не болеть!:*люблю тебя очень-очень сильно:*')
 
 });
 
 bot.onText( /\/love_you/,(msg) => {
 
-    bot.sendMessage(msg.chat.id, 'я безумно сильно люблю тебя, моя девочка<3 ужасно соскучился по тебе и жду не дождусь когда ты приедешь:*')
+    bot.sendMessage(msg.chat.id, 'моя самая-самая родная и любимая девочка, безумно тебя люблю и очень скучаю:*еще чуть-чуть и ты будешь собираться и лететь ко мне))')
 
 });
 
@@ -53,7 +53,7 @@ bot.on('message', (msg) => {
         const chatId = msg.chat.id;
 
         // send a message to the chat acknowledging receipt of their message
-        bot.sendMessage(chatId, 'я еще пишу нового бота, поэтому если хочешь еще что-то использовать то напиши /love_you ))');
+        // bot.sendMessage(chatId, 'я еще пишу нового бота, поэтому если хочешь еще что-то использовать то напиши /love_you ))');
     }
   
 });
