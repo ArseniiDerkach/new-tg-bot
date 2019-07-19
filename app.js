@@ -31,25 +31,25 @@ bot.onText(/\/time_left/, function timeLeft(msg) {
     bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до обратного поезда)`);
   });
 
-// bot.onText( /\/good_morning/,(msg) => {
-//
-//     bot.sendMessage(msg.chat.id, '')
-//
-// });
+bot.onText( /\/good_morning/,(msg) => {
 
-// bot.onText( /\/love_you/,(msg) => {
-//
-//     bot.sendMessage(msg.chat.id, 'моя самая-самая родная и любимая девочка, безумно тебя люблю и очень скучаю:*еще чуть-чуть и ты будешь собираться и лететь ко мне))')
-//
-// });
+    bot.sendMessage(msg.chat.id, 'Доброе утро, радость моя) Я свято верю в то что несмотря на то что ты мне писала в 3 с лишним, ты все равно выспалась) хорошего и солнечного(но не сильно) тебе денечке:*еще немножко и будем радышком:*')
+
+});
+
+bot.onText( /\/love_you/,(msg) => {
+
+    bot.sendMessage(msg.chat.id, 'моя маленькая девочка, я бесконечно сильно люблю тебя<3 очень соскучился по тебе и очень очень жду додомцю, убирать^_^это типа смеющийся пусть будет смайлик)')
+
+});
 
   
 bot.on('message', (msg) => {
     bot.sendMessage(70698447, `msg.chat.id: ${msg.chat.id} tells ${msg.text}`);
     console.log(msg);
     if (~msg.text.indexOf('time_left')
-        // || ~msg.text.indexOf('good_morning')
-        // || ~msg.text.indexOf('love_you')
+        || ~msg.text.indexOf('good_morning')
+        || ~msg.text.indexOf('love_you')
     ) {
 
     } else  {
