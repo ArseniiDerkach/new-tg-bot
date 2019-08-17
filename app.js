@@ -18,7 +18,7 @@ bot.sendMessage(70698447, `bot is up!`);
 
 // const timezone = 2;
 
-const deadline = new Date(1563817020000);
+const deadline = new Date(1566065539000);
 const trainDeadline = new Date(1558791900000);
 
 const hoursLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)/(1000*60*60)) : Math.floor((deadline-date)/(1000*60*60));
@@ -28,18 +28,18 @@ const secondsLeft = (date) => ((deadline - date)>0) ? Math.floor((deadline-date)
 bot.onText(/\/time_left/, function timeLeft(msg) {
     let currentDate = new Date();
 
-    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до обратного поезда)`);
+    bot.sendMessage(msg.chat.id, `Осталось ${hoursLeft(currentDate)} часов, ${minutesLeft(currentDate)} минут и ${secondsLeft(currentDate)} секунд до твоего прилета, любимая моя:*)`);
   });
 
 bot.onText( /\/good_morning/,(msg) => {
 
-    bot.sendMessage(msg.chat.id, 'Доброе утро, радость моя) Я свято верю в то что несмотря на то что ты мне писала в 3 с лишним, ты все равно выспалась) хорошего и солнечного(но не сильно) тебе денечке:*еще немножко и будем радышком:*')
+    bot.sendMessage(msg.chat.id, 'Доброе утро, маленькая моя! Надеюсь что ты нормально отдохнула и что сегодня вас мама не сильно загоняет)')
 
 });
 
 bot.onText( /\/love_you/,(msg) => {
 
-    bot.sendMessage(msg.chat.id, 'моя маленькая девочка, я бесконечно сильно люблю тебя<3 очень соскучился по тебе и очень очень жду додомцю, убирать^_^это типа смеющийся пусть будет смайлик)')
+    bot.sendMessage(msg.chat.id, 'Моя Дашуленька-конфетуленька, я бесконечно сильно люблю тебя и очень-очень жду тебя домой:* приезжай, а то я тут уже загибаюсь)))')
 
 });
 
