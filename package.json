@@ -12,7 +12,7 @@
   "author": "Arsenii",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^5.4.2",
+    "mongoose": "^5.7.5",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
